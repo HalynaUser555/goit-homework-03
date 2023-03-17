@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
@@ -24,10 +25,11 @@ body {
   color: var(--color-SLATE);
   background-color: var(--color-background);
 }
+
 .container {
   width: 1158px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -36,12 +38,14 @@ body {
   display: flex;
   align-items: center;
 }
+
 .list {
   list-style: none;
   font-style: normal;
   padding: 0;
   margin: 0;
 }
+
 h1,
 h2,
 h3,
@@ -53,7 +57,26 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
-/*Шапка сайту*/
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+/*-----------------------------Шапка сайту---------------------------------------------*/
 
 .logo {
   text-decoration: none;
@@ -65,16 +88,21 @@ p {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
+  margin-right: 76px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
+
 .text-logo-header {
   color: var(--color-NAVYBLU);
 }
+
 .site-nav {
   display: flex;
   margin-left: 76px;
 }
 
-.site-nav .item + .item {
+.site-nav .item+.item {
   margin-left: 40px;
 }
 
@@ -87,12 +115,16 @@ p {
   line-height: 1.5;
   font-size: 16px;
   display: block;
-  padding: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
 }
+
 .link {
   text-decoration: none;
   font-style: normal;
 }
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--color-OCEAN);
@@ -109,7 +141,9 @@ p {
   font-weight: 400;
   font-size: 16px;
   display: block;
-  padding: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-left: 40px;
 }
 
 .navigation-nav .link:hover,
@@ -118,23 +152,27 @@ p {
   text-decoration: none;
   font-style: normal;
 }
+
 .navigation-nav {
   text-decoration: none;
   font-style: normal;
   display: flex;
   margin-left: auto;
 }
-.navigation-nav .item + .item {
+
+.navigation-nav .item+.item {
   margin-left: 40px;
 }
 
-/*Секції*/
+/*---------------------------Секції---------------------------------------*/
 
 .hero {
   text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
+
 .hero-title {
-  margin-top: 0px;
   margin-bottom: 48px;
   font-style: normal;
   color: var(--color-WHITE);
@@ -145,6 +183,8 @@ p {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  width: 496px;
+
 }
 
 .background-hero-title {
@@ -168,12 +208,19 @@ p {
   display: inline-block;
   text-align: center;
 }
+
 .hero-button:hover {
   background-color: var(--color-OCEAN);
 }
+
 .box {
   display: flex;
   justify-content: center;
+  margin-bottom: 72px;
+}
+
+.box>.item+.item {
+  margin-left: 24px;
 }
 
 .button {
@@ -184,15 +231,14 @@ p {
   line-height: 1.5;
   letter-spacing: 0.04em;
   border-radius: 4px;
-  border: 1px solid var(--color-solid);
   cursor: pointer;
   color: var(--color-IRIS);
   background-color: var(--color-Cloud);
   padding: 12px 24px;
   display: inline-block;
   text-align: center;
-  margin-right: 24px;
-  margin-bottom: 72px;
+  border: 1px solid var(--color-solid);
+
 }
 
 .button-pageone2 {
@@ -209,6 +255,7 @@ p {
   background-color: var(--color-Cloud);
   cursor: pointer;
 }
+
 .button-pageone3 {
   font-family: "Roboto", sans-serif;
   min-width: 78px;
@@ -222,6 +269,7 @@ p {
   background-color: var(--color-Cloud);
   cursor: pointer;
 }
+
 .button-pageone4 {
   font-family: "Roboto", sans-serif;
   min-width: 101px;
@@ -235,6 +283,7 @@ p {
   background-color: var(--color-Cloud);
   cursor: pointer;
 }
+
 .button-pageone5 {
   font-family: "Roboto", sans-serif;
   min-width: 126px;
@@ -247,6 +296,7 @@ p {
   color: var(--color-IRIS);
   background-color: var(--color-Cloud);
   cursor: pointer;
+
 }
 
 .button:hover,
@@ -261,74 +311,84 @@ p {
 .button-pageone5:focus {
   background-color: var(--color-OCEAN);
   color: var(--color-WHITE);
+  border-color: transparent;
 }
+
 .images {
   background-color: var(--color-WHITE);
 }
-/* Картинки з текстом   */
+
+/*----------------------------------------Картинки з текстом---------------------------*/
 .card-box {
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -24px;
-  margin-bottom: -48px;
+  row-gap: 48px;
+  column-gap: 24px;
 }
 
-.card-box > .card {
-  border: 1px solid var(--color-solid);
-  flex-basis: calc(100% / 3 - 24px);
-  width: 360px;
+.card-box>.card {
+  flex-basis: calc((100% - 2*24px)/3);
   background-color: var(--color-WHITE);
-  margin-right: 24px;
-  margin-bottom: 48px;
 }
+
 .card-text {
-  margin: 32px;
+  padding: 16px;
+  border: 1px solid var(--color-solid);
 }
+
 .img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-/* Фотографія з текстом*/
+
+/*------------------------- Фотографія з текстом*---------------------------------------*/
 
 .card-box-photo {
-  padding: 0px;
-  margin: 0px;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -24px;
+  column-gap: 24px;
 }
 
-.card-box-photo > .card-photo {
-  flex-basis: calc(100% / 4 - 24px);
+.card-box-photo>.card-photo {
+  flex-basis: calc(100% /4-24px);
   width: 264px;
   background-color: var(--color-WHITE);
-  margin-right: 24px;
   border-radius: 0px 0px 4px 4px;
-}
-.card-text-photo {
-  text-align: center;
-  margin: 32px;
+  flex-wrap: wrap;
 }
 
-/*картинки без тексту*/
+
+.card-text-photo {
+  text-align: center;
+  padding: 32px;
+}
+
+/*------------------------------------картинки без тексту--------------------------------------------------*/
 .card-box-picture {
-  padding: 0px;
-  margin: 0px;
+  flex-basis: calc((100% - 2*24px)/3);
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -24px;
+  column-gap: 24px;
 }
-.card-box-picture > .card-picture {
-  flex-basis: calc(100% / 3 - 24px);
-  width: 360px;
+
+.card-box-picture>.card-picture {
   background-color: var(--color-WHITE);
-  margin-right: 24px;
+}
+
+.work-section {
+  padding-bottom: 120px;
+}
+
+.time-section {
+  padding-bottom: 120px;
+  background-color: var(--color-Cloud)
+}
+
+.section-portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+
 }
 
 .work-title,
@@ -344,19 +404,20 @@ p {
   line-height: 1.11;
   letter-spacing: 0.02em;
 }
+
 .time-title {
   padding-top: 120px;
   margin-top: 0px;
-  margin-bottom: 72px;
+  padding-bottom: 72px;
+  background-color: var(--color-Cloud)
 }
+
 .work-title {
   margin-top: 0px;
   margin-bottom: 72px;
+
 }
-.time,
-.time-title {
-  background-color: var(--color-Cloud);
-}
+
 .title {
   letter-spacing: 0.02em;
   color: var(--color-NAVYBLU);
@@ -366,6 +427,12 @@ p {
   margin-bottom: 8px;
   border: 1px;
 }
+
+.section-subtitles {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .subtitles {
   font-style: normal;
   color: var(--color-NAVYBLU);
@@ -389,16 +456,18 @@ p {
 
 .text-paragraph {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+
 }
+
 .text-paragraph .item {
   width: 264px;
 }
 
-.text-paragraph .item + .item {
-  margin-left: 12px;
+.text-paragraph .item+.item {
+  margin-left: 24px;
 }
+
 .text-paragraph-photo {
   font-style: normal;
   color: var(--color-SLATE);
@@ -408,7 +477,7 @@ p {
   font-weight: 400;
 }
 
-/*footer*/
+/*----------------------------------------footer-----------------------------------------*/
 .text-footer {
   font-style: normal;
   color: var(--color-Cloud);
@@ -417,12 +486,17 @@ p {
   line-height: 1.5;
   margin-top: 17.5px;
 }
+
 .background-footer {
   background-color: var(--color-background-hero);
 }
+
 .text-logo-footer {
   color: var(--color-Cloud);
 }
+
 .box-footer {
   width: 264px;
+  padding-top: 101.5px;
+  padding-bottom: 100px;
 }

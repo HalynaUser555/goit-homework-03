@@ -77,7 +77,9 @@ img {
     margin: -1px;
 }
 /*-----------------------------Шапка сайту---------------------------------------------*/
-
+.page-header{
+  border-bottom: 1px solid var(--color-solid);
+}
 .logo {
   text-decoration: none;
   color: var(--color-IRIS);
@@ -89,8 +91,7 @@ img {
   font-size: 18px;
   line-height: 1.17;
   margin-right: 76px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+ 
 }
 
 .text-logo-header {
@@ -99,7 +100,6 @@ img {
 
 .site-nav {
   display: flex;
-  margin-left: 76px;
 }
 
 .site-nav .item+.item {
@@ -143,7 +143,7 @@ img {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-left: 40px;
+ 
 }
 
 .navigation-nav .link:hover,
@@ -161,7 +161,7 @@ img {
 }
 
 .navigation-nav .item+.item {
-  margin-left: 40px;
+  padding-left: 40px;
 }
 
 /*---------------------------Секції---------------------------------------*/
@@ -332,8 +332,11 @@ img {
 }
 
 .card-text {
-  padding: 16px;
+  padding-left:16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   border: 1px solid var(--color-solid);
+  border-top: none;
 }
 
 .img {
@@ -351,11 +354,9 @@ img {
 }
 
 .card-box-photo>.card-photo {
-  flex-basis: calc(100% /4-24px);
-  width: 264px;
   background-color: var(--color-WHITE);
   border-radius: 0px 0px 4px 4px;
-  flex-wrap: wrap;
+  flex-basis: calc((100% - 2*24px)/4);
 }
 
 
@@ -381,6 +382,7 @@ img {
 }
 
 .time-section {
+  padding-top: 120px;
   padding-bottom: 120px;
   background-color: var(--color-Cloud)
 }
@@ -406,9 +408,8 @@ img {
 }
 
 .time-title {
-  padding-top: 120px;
   margin-top: 0px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
   background-color: var(--color-Cloud)
 }
 
@@ -485,18 +486,28 @@ img {
   font-size: 16px;
   line-height: 1.5;
   margin-top: 17.5px;
+  width: 264px;
 }
 
 .background-footer {
   background-color: var(--color-background-hero);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .text-logo-footer {
-  color: var(--color-Cloud);
+  color: var(--color-Cloud);  
 }
-
-.box-footer {
-  width: 264px;
-  padding-top: 101.5px;
-  padding-bottom: 100px;
+.logo-footer{
+  text-decoration: none;
+  color: var(--color-IRIS);
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  margin:0px;
+  padding:0px;
 }
